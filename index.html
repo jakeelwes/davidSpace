@@ -1,6 +1,6 @@
 <html>
 <head>
-  <script src="p5.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.19/p5.js"></script>
 
 <style>
   body {
@@ -13,15 +13,18 @@
 <body>
 
   <script>
+
   var img;
 
   function setup(){
+    createCanvas(windowWidth, windowHeight);
     img = loadImage("david.png");
   }
 
   function draw(){
     rotate(2);
-    img(img, mouseX, mouseY);
+    // ofFill(255,20);
+    image(img, mouseX, mouseY, img.width/4, img.height/4);
   }
 
   </script>
